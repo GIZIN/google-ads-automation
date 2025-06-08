@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
             const campaign = {
               name: campaignConfig.name,
               advertising_channel_type: enums.AdvertisingChannelType.SEARCH,
-              status: enums.CampaignStatus.PAUSED,
+              status: campaignConfig.autoStart ? enums.CampaignStatus.ENABLED : enums.CampaignStatus.PAUSED,
               campaign_budget: {
                 amount_micros: campaignConfig.dailyBudget * 1000000,
                 delivery_method: enums.BudgetDeliveryMethod.STANDARD,
@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
                 for (const adConfig of adGroupConfig.ads) {
                   const ad = {
                     ad_group: adGroupResourceName,
-                    status: enums.AdStatus.PAUSED,
+                    status: campaignConfig.autoStart ? enums.AdStatus.ENABLED : enums.AdStatus.PAUSED,
                     responsive_search_ad: {
                       headlines: adConfig.headlines.map((headline: string) => ({ text: headline })),
                       descriptions: adConfig.descriptions.map((description: string) => ({ text: description })),

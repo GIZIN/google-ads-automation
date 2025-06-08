@@ -1,0 +1,38 @@
+{
+  "accountId": "XXX-XXX-XXXX",
+  "campaigns": [
+    {
+      "name": "自動開始テストキャンペーン",
+      "autoStart": true,
+      "dailyBudget": 1000,
+      "startDate": "2025-06-09",
+      "locations": ["東京都"],
+      "adGroups": [
+        {
+          "name": "テスト広告グループ",
+          "keywords": [
+            {
+              "text": "テストキーワード",
+              "matchType": "PHRASE",
+              "bidAmount": 50
+            }
+          ],
+          "ads": [
+            {
+              "headlines": [
+                "自動開始のテスト",
+                "慎重にご利用ください",
+                "予算設定を確認"
+              ],
+              "descriptions": [
+                "autoStartをtrueに設定すると、作成後すぐに広告配信が開始されます。",
+                "初回は必ず小額予算でテストすることをお勧めします。"
+              ],
+              "finalUrl": "https://example.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
