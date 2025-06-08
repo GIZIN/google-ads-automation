@@ -13,6 +13,7 @@ function HomeContent() {
   const [jsonData, setJsonData] = useState<any>(null)
   const [isProcessing, setIsProcessing] = useState(false)
   const [logs, setLogs] = useState<string[]>([])
+  const [autoStart, setAutoStart] = useState(false)
 
   const handleFileUpload = (data: any) => {
     setJsonData(data)
@@ -32,7 +33,13 @@ function HomeContent() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          config: jsonData,
+          config: {
+            ...jsonData,
+            campaigns: jsonData.campaigns.map((campaign: any) => ({
+              ...campaign,
+              autoStart: autoStart
+            }))
+          },
           dryRun: isDryRun,
         }),
       })
@@ -95,6 +102,24 @@ function HomeContent() {
             {jsonData && (
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-lg font-semibold mb-4">実行オプション</h2>
+                <div className="mb-4">
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={autoStart}
+                      onChange={(e) => setAutoStart(e.target.checked)}
+                      className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                    />
+                    <span className="text-sm">
+                      作成後すぐに配信を開始する（上級者向け）
+                      {autoStart && (
+                        <span className="text-red-600 ml-2">
+                          ⚠️ 確認なしで課金が始まります
+                        </span>
+                      )}
+                    </span>
+                  </label>
+                </div>
                 <div className="space-x-4">
                   <button
                     onClick={() => handleExecute(true)}
