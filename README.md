@@ -2,6 +2,8 @@
 
 JSONファイルをアップロードするだけでGoogle Ads広告キャンペーンを自動作成するWebアプリケーション
 
+![Google Ads 自動設定ツール デモ](docs/images/demo-screenshot.png)
+
 ## 機能
 
 - 📤 JSONファイルのドラッグ&ドロップアップロード
