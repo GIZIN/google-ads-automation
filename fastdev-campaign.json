@@ -3,6 +3,7 @@
   "campaigns": [
     {
       "name": "高速開発サービス_検索_202406",
+      "autoStart": false,
       "dailyBudget": 2900,
       "startDate": "2025-06-09",
       "endDate": "2025-06-15",
