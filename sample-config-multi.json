@@ -1,0 +1,108 @@
+{
+  "accountId": "XXX-XXX-XXXX",
+  "campaigns": [
+    {
+      "name": "検索広告キャンペーン - 東京",
+      "dailyBudget": 10000,
+      "startDate": "2025-06-10",
+      "locations": ["東京都", "神奈川県"],
+      "adGroups": [
+        {
+          "name": "ブランドキーワード",
+          "keywords": [
+            {
+              "text": "[会社名]",
+              "matchType": "EXACT",
+              "bidAmount": 200
+            },
+            {
+              "text": "会社名 サービス",
+              "matchType": "PHRASE",
+              "bidAmount": 150
+            }
+          ],
+          "ads": [
+            {
+              "headlines": [
+                "公式｜会社名のサービス",
+                "信頼と実績の20年",
+                "無料相談実施中"
+              ],
+              "descriptions": [
+                "創業20年の実績。お客様のビジネスを全力でサポートします。",
+                "まずは無料相談から。専門スタッフが丁寧にご対応いたします。"
+              ],
+              "finalUrl": "https://example.com"
+            }
+          ]
+        },
+        {
+          "name": "競合キーワード",
+          "keywords": [
+            {
+              "text": "業界 比較",
+              "matchType": "BROAD",
+              "bidAmount": 80
+            },
+            {
+              "text": "サービス おすすめ",
+              "matchType": "PHRASE",
+              "bidAmount": 100
+            }
+          ],
+          "ads": [
+            {
+              "headlines": [
+                "業界No.1の実績",
+                "選ばれる理由があります",
+                "今なら特別キャンペーン"
+              ],
+              "descriptions": [
+                "累計10万社以上の導入実績。お客様満足度98%の高評価。",
+                "期間限定で初期費用無料。この機会にぜひお試しください。"
+              ],
+              "finalUrl": "https://example.com/campaign"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "検索広告キャンペーン - 大阪",
+      "dailyBudget": 8000,
+      "startDate": "2025-06-10",
+      "locations": ["大阪府", "京都府", "兵庫県"],
+      "adGroups": [
+        {
+          "name": "地域限定キーワード",
+          "keywords": [
+            {
+              "text": "大阪 サービス",
+              "matchType": "PHRASE",
+              "bidAmount": 120
+            },
+            {
+              "text": "[関西 業界名]",
+              "matchType": "EXACT",
+              "bidAmount": 150
+            }
+          ],
+          "ads": [
+            {
+              "headlines": [
+                "大阪で選ばれるサービス",
+                "関西エリア対応",
+                "地域密着20年の実績"
+              ],
+              "descriptions": [
+                "大阪・京都・神戸を中心に展開。地域に根ざしたサービスを提供。",
+                "関西の企業様に選ばれ続けて20年。安心と信頼の実績。"
+              ],
+              "finalUrl": "https://example.com/osaka"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

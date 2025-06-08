@@ -1,0 +1,47 @@
+{
+  "accountId": "XXX-XXX-XXXX",
+  "campaigns": [
+    {
+      "name": "テストキャンペーン 2025年6月",
+      "dailyBudget": 5000,
+      "startDate": "2025-06-09",
+      "locations": ["東京都"],
+      "adGroups": [
+        {
+          "name": "メイン広告グループ",
+          "keywords": [
+            {
+              "text": "Google Ads 自動化",
+              "matchType": "PHRASE",
+              "bidAmount": 100
+            },
+            {
+              "text": "広告運用 効率化",
+              "matchType": "BROAD",
+              "bidAmount": 80
+            },
+            {
+              "text": "[Google広告 API]",
+              "matchType": "EXACT",
+              "bidAmount": 120
+            }
+          ],
+          "ads": [
+            {
+              "headlines": [
+                "Google Ads運用を自動化",
+                "JSONファイルで簡単設定",
+                "広告作成の時間を大幅削減"
+              ],
+              "descriptions": [
+                "複雑な広告設定をJSONファイル1つで完結。手動作業を削減し、ミスを防ぎます。",
+                "開発者向けGoogle Ads自動化ツール。APIを活用した効率的な広告運用を実現。"
+              ],
+              "finalUrl": "https://example.com/google-ads-automation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
